@@ -1,3 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+
 body {
-    background: green;
+    background: DarkCyan;
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+h1 {
+    color: MediumAquaMarine;
+}
+
+.subtitle {
+    color: LightSeaGreen;
+}
+
+.main {
+    font-size: 1.5em;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.item {
+    display: inline-block;
+    padding: 40px 20px;
+    border: 3px solid PeachPuff;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.5s ease-out, color 0.5s ease-out;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
+}
+
+a:hover .item {
+    background: peachpuff;
+    color: salmon;
+}
+
+.item-title {
+    display: inline;
 }
