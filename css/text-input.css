@@ -1,0 +1,42 @@
+.text-input li {
+    height: 200px;
+}
+
+input {
+    background: transparent;
+    border: 0;
+}
+
+input:focus {
+    outline-offset: 0;
+    outline: none;
+}
+
+.style-1 .input {
+    margin: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.style-1 .input input {
+    height: 50px;
+    width: 200px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.style-1 .input label {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.style-1 .input label span {
+    margin-top: 10px;
+    display: inline-block;
+    padding-left: 8px;
+}
+
+.style-1 .input.focus label span {
+    transform: translate3d(0, -150%, 0);
+}

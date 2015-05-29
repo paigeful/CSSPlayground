@@ -4,6 +4,7 @@ body {
     background: DarkCyan;
     color: white;
     font-family: 'Raleway', Arial, sans-serif;
+    margin: 0;
 }
 
 a {
@@ -11,18 +12,39 @@ a {
     color: white;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
 .header {
     margin: 0 auto;
     text-align: center;
-
+    padding: 30px;
+    background: LightSeaGreen;
+    height: 120px;
 }
 
-h1 {
-    color: MediumAquaMarine;
+.header .back {
+    position: absolute;
+    padding: 10px;
+    top: 60px;
+    left: 30px;
+    background: peachpuff;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.header .back a {
+    color: LightSeaGreen;
 }
 
 .subtitle {
-    color: LightSeaGreen;
+    color: PeachPuff;
 }
 
 .main {
@@ -42,9 +64,37 @@ h1 {
 
 a:hover .item {
     background: peachpuff;
-    color: salmon;
+    color: DarkCyan;
 }
 
 .item-title {
     display: inline;
+}
+
+/*** color palette ***/
+.color-palette {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.color-palette li {
+    height: 35px;
+    width: 35px;
+    border: 2px solid white;
+    border-bottom: 0px;
+}
+.color-palette li:last-child {
+    border-bottom: 2px solid white;
+}
+.color-DarkCyan {
+    background-color: DarkCyan;
+}
+.color-LightSeaGreen {
+    background-color: LightSeaGreen;
+}
+.color-White {
+    background-color: White;
+}
+.color-PeachPuff {
+    background-color: PeachPuff;
 }
