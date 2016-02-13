@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        section {
+            font-family: helvetica;
+            position: relative;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            padding: 10px 25px;
+            background: cadetblue;
+            cursor: pointer;
+            color: white;
+            width: 100px;
+            text-align: center;
+            transition: background 0.2s ease-in;
+        }
+
+        li:hover {
+            background: darkturquoise;
+
+        }
+
+        .indicator {
+            position: absolute;
+            width: 90px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: gold;
+            width: 150px;
+            transition: left 0.24s ease-in-out;
+            opacity: 0;
+        }
+
+        section.hover .indicator {
+            opacity: 1;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+    <section>
+        <ul>
+            <li data-idx="0">Cat Day</li><li data-idx="1">Dog Day</li><li data-idx="2">Catdog Day</li>
+        </ul>
+        <div class="indicator"></div>
+    </section>
+
+
+    <script type="text/javascript">
+        var $section = jQuery('section');
+        var $nav = jQuery('ul');
+        var $navList = jQuery('li');
+        var $indicator = jQuery('.indicator');
+
+        $navList.hover(function (i) {
+            var currentTarget = $(i.currentTarget);
+            var idx = currentTarget.attr('data-idx');
+            $section.toggleClass('hover');
+
+            updateIndicator(idx);
+        });
+
+        function updateIndicator (idx) {
+            var width = $indicator.width();
+            var left = width * idx;
+
+            $indicator.css('left', left + 'px');
+        }
+    </script>
+</body>
+</html>
